@@ -35,9 +35,11 @@ import android.content.ServiceConnection;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.IBinder;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.MotionEvent;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -51,8 +53,11 @@ import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.formatter.PercentFormatter;
+import com.github.mikephil.charting.highlight.Highlight;
+import com.github.mikephil.charting.listener.ChartTouchListener;
+import com.github.mikephil.charting.listener.OnChartGestureListener;
 
-public class ConsumerActivity extends Activity {
+public class ConsumerActivity extends Activity implements OnChartGestureListener {
     private static TextView mTextView;
     private static MessageAdapter mMessageAdapter;
     private boolean mIsBound = false;
@@ -76,11 +81,12 @@ public class ConsumerActivity extends Activity {
 
         //Pie Chart
         mChart = (PieChart) findViewById(R.id.chart1);
+        mChart.setHardwareAccelerationEnabled(true);
         mChart.setUsePercentValues(true);
         mChart.setDescription("");
         mChart.setExtraOffsets(5, 10, 5, 5);
 
-        mChart.setDragDecelerationFrictionCoef(0.95f);
+        //mChart.setDragDecelerationFrictionCoef(0.95f);
 
         //tf = Typeface.createFromAsset(getAssets(), "OpenSans-Regular.ttf");
 
@@ -101,13 +107,16 @@ public class ConsumerActivity extends Activity {
         mChart.setRotationAngle(180);
         // enable rotation of the chart by touch
         mChart.setRotationEnabled(false);
-        mChart.setHighlightPerTapEnabled(true);
+        mChart.setHighlightPerTapEnabled(false);
 
         // mChart.setUnit(" €");
         // mChart.setDrawUnitsInChart(true);
 
         // add a selection listener
         //mChart.setOnChartValueSelectedListener(this);
+
+        // add a gesture listener
+        mChart.setOnChartGestureListener(this);
 
         setData(3, 100);
 
@@ -340,4 +349,54 @@ public class ConsumerActivity extends Activity {
 
         mChart.invalidate();
     }
+
+
+    // INTERFACE OnChartGestureListener Implementation
+    @Override
+    public void onChartGestureStart(MotionEvent me, ChartTouchListener.ChartGesture lastPerformedGesture) {
+        Log.i("Gesture", "START, x: " + me.getX() + ", y: " + me.getY());
+    }
+
+    @Override
+    public void onChartGestureEnd(MotionEvent me, ChartTouchListener.ChartGesture lastPerformedGesture) {
+        Log.i("Gesture", "END, lastGesture: " + lastPerformedGesture);
+
+        // un-highlight values after the gesture is finished and no single-tap
+        if(lastPerformedGesture != ChartTouchListener.ChartGesture.SINGLE_TAP)
+            mChart.highlightValues(null); // or highlightTouch(null) for callback to onNothingSelected(...)
+    }
+
+    @Override
+    public void onChartLongPressed(MotionEvent me) {
+        Log.i("LongPress", "Chart longpressed.");
+    }
+
+    @Override
+    public void onChartSingleTapped(MotionEvent me) {
+        Log.i("SingleTap", "Chart single-tapped.");
+    }
+
+
+
+    // NOT USED BUT HAVE TO IMPLEMENT PER INTERFACE OnChartGestureListener
+    @Override
+    public void onChartDoubleTapped(MotionEvent me) {
+        Log.i("DoubleTap", "Chart double-tapped.");
+    }
+
+    @Override
+    public void onChartFling(MotionEvent me1, MotionEvent me2, float velocityX, float velocityY) {
+        Log.i("Fling", "Chart flinged. VeloX: " + velocityX + ", VeloY: " + velocityY);
+    }
+
+    @Override
+    public void onChartScale(MotionEvent me, float scaleX, float scaleY) {
+        Log.i("Scale / Zoom", "ScaleX: " + scaleX + ", ScaleY: " + scaleY);
+    }
+
+    @Override
+    public void onChartTranslate(MotionEvent me, float dX, float dY) {
+        Log.i("Translate / Move", "dX: " + dX + ", dY: " + dY);
+    }
+
 }

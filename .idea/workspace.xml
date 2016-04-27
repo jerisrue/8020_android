@@ -6,52 +6,47 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CUSTOM_FILTER" value="hea" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3da7ba7a-054c-45c1-bcb6-9d25466c56a2" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/main/res/values/integers.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/cache.properties.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileHashes.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/outputFileStates.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/outputFileStates.bin" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.8/taskArtifacts/taskArtifacts.bin" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$integer.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/android/support/v7/appcompat/R$integer.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/ConsumerActivity$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/ConsumerActivity$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/ConsumerActivity$Message.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/ConsumerActivity$Message.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/ConsumerActivity$MessageAdapter$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/ConsumerActivity$MessageAdapter$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/ConsumerActivity$MessageAdapter$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/ConsumerActivity$MessageAdapter$2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/ConsumerActivity$MessageAdapter.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/ConsumerActivity$MessageAdapter.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/ConsumerActivity.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/ConsumerActivity.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/ConsumerService$1.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/ConsumerService$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/ConsumerService$2.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/ConsumerService$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/ConsumerService$3.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/ConsumerService$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/ConsumerService$LocalBinder.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/ConsumerService$LocalBinder.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/ConsumerService$ServiceConnection.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/ConsumerService$ServiceConnection.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/ConsumerService.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/ConsumerService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/R$integer.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/R$integer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/R$layout.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/R$layout.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/R$mipmap.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/R$mipmap.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/R$string.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/R$string.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/R$style.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/R$style.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/R$styleable.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/R$styleable.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/R$xml.class" afterPath="$PROJECT_DIR$/app/build/intermediates/classes/debug/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/R$xml.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/accessory-v2.3.2_5b060d65dc17016312341918aba8959811b3a39a.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/accessory-v2.3.2_5b060d65dc17016312341918aba8959811b3a39a.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.1.1_083cbd1608a25a397312d9826dedd8f133b496c5.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-appcompat-v7-23.1.1_083cbd1608a25a397312d9826dedd8f133b496c5.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.1.1_661a852c7ad2754ee11b603207016e12c806f2d4.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/com.android.support-support-v4-23.1.1_661a852c7ad2754ee11b603207016e12c806f2d4.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/debug_691db3a9a8a27823bed7389ae02859297782d699.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/debug_691db3a9a8a27823bed7389ae02859297782d699.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.1_29bc2f3fca28484cdc837d6aa8f8e9ec179f8d7a.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/internal_impl-23.1.1_29bc2f3fca28484cdc837d6aa8f8e9ec179f8d7a.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/mpandroidchartlibrary-2-2-4_775d14c8d94a36e4be7f78f2d31f3cae75596a1a.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/mpandroidchartlibrary-2-2-4_775d14c8d94a36e4be7f78f2d31f3cae75596a1a.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/sdk-v1.0.0_863c676148ee3a0cb1d83a9a8275fe3adc5d54b9.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/sdk-v1.0.0_863c676148ee3a0cb1d83a9a8275fe3adc5d54b9.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.1_c34f74effe0dfaa697250faf336a4cfee8a9ff76.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/pre-dexed/debug/support-annotations-23.1.1_c34f74effe0dfaa697250faf336a4cfee8a9ff76.jar" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug-androidTest.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug-androidTest.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/app/build/intermediates/res/resources-debug.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/dex/debug/folders/1000/1f/main/classes.dex" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJavaRes/debug/jars/2/1f/main.jar" afterPath="$PROJECT_DIR$/app/build/intermediates/transforms/mergeJavaRes/debug/jars/2/1f/main.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug-unaligned.apk" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" afterPath="$PROJECT_DIR$/app/build/outputs/apk/app-debug.apk" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/generated/mockable-android-23.jar" afterPath="$PROJECT_DIR$/build/generated/mockable-android-23.jar" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/android/support/v7/appcompat/R.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/R.java" afterPath="$PROJECT_DIR$/app/build/generated/source/r/debug/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/multi/values.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-xxxhdpi-v4.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable-xxxhdpi-v4.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/drawable.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout.json" afterPath="$PROJECT_DIR$/app/build/intermediates/blame/res/debug/single/layout.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/incremental/mergeDebugResources/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml" afterPath="$PROJECT_DIR$/app/build/intermediates/res/merged/debug/values/values.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" afterPath="$PROJECT_DIR$/app/build/intermediates/symbols/debug/R.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/ConsumerActivity.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/ConsumerActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/java/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/ConsumerService.java" afterPath="$PROJECT_DIR$/app/src/main/java/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/ConsumerService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
     </list>
     <ignored path="eightytwenty_android2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -99,12 +94,18 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConsumerService.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ConsumerService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/ConsumerService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.2532349">
-              <caret line="153" column="61" selection-start-line="153" selection-start-column="61" selection-end-line="153" selection-end-column="61" />
-              <folding />
+            <state vertical-scroll-proportion="10.055555">
+              <caret line="104" column="104" selection-start-line="104" selection-start-column="104" selection-end-line="104" selection-end-column="104" />
+              <folding>
+                <element signature="e#0#10211#0" expanded="true" />
+                <element signature="e#9750#9898#0" expanded="true" />
+                <element signature="e#9897#9898#0" expanded="true" />
+                <element signature="e#10052#10200#0" expanded="true" />
+                <element signature="e#10199#10200#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -152,40 +153,37 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConsumerActivity.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ConsumerActivity.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/ConsumerActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-12.944445">
-              <caret line="204" column="73" selection-start-line="204" selection-start-column="73" selection-end-line="204" selection-end-column="73" />
+            <state vertical-scroll-proportion="0.3043478">
+              <caret line="297" column="68" selection-start-line="297" selection-start-column="62" selection-end-line="297" selection-end-column="68" />
               <folding>
-                <element signature="e#6246#6284#0" expanded="true" />
-                <element signature="e#8035#8036#0" expanded="true" />
-                <element signature="e#8096#8097#0" expanded="true" />
-                <element signature="e#8552#9166#0" expanded="true" />
-                <element signature="e#9165#9166#0" expanded="true" />
-                <element signature="e#9229#9422#0" expanded="true" />
-                <element signature="e#9421#9422#0" expanded="true" />
-                <element signature="e#9484#9485#0" expanded="true" />
-                <element signature="e#9531#9532#0" expanded="true" />
-                <element signature="e#9596#9597#0" expanded="true" />
-                <element signature="e#9650#9651#0" expanded="true" />
-                <element signature="e#9715#9716#0" expanded="true" />
-                <element signature="e#9747#9748#0" expanded="true" />
-                <element signature="e#10803#10861#0" expanded="true" />
-                <element signature="e#10899#10959#0" expanded="true" />
-                <element signature="e#11007#11046#0" expanded="true" />
-                <element signature="e#11118#11159#0" expanded="true" />
-                <element signature="e#11435#11474#0" expanded="true" />
-                <element signature="e#11502#11543#0" expanded="true" />
-                <element signature="e#11657#11696#0" expanded="true" />
-                <element signature="e#11763#11804#0" expanded="true" />
-                <element signature="e#12043#12050#0" expanded="true" />
-                <element signature="e#12389#12397#0" expanded="true" />
-                <element signature="e#12697#12706#0" expanded="true" />
-                <element signature="e#13962#13963#0" expanded="true" />
-                <element signature="e#14018#14019#0" expanded="true" />
-                <element signature="e#14332#14333#0" expanded="true" />
-                <element signature="e#14390#14391#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#6247#6285#0" expanded="true" />
+                <element signature="e#8744#10403#0" expanded="true" />
+                <element signature="e#10402#10403#0" expanded="true" />
+                <element signature="e#10466#10659#0" expanded="true" />
+                <element signature="e#10658#10659#0" expanded="true" />
+                <element signature="e#10721#10722#0" expanded="true" />
+                <element signature="e#10768#10769#0" expanded="true" />
+                <element signature="e#10833#10834#0" expanded="true" />
+                <element signature="e#10887#10888#0" expanded="true" />
+                <element signature="e#10952#10953#0" expanded="true" />
+                <element signature="e#10984#10985#0" expanded="true" />
+                <element signature="e#12096#12135#0" expanded="true" />
+                <element signature="e#12169#12210#0" expanded="true" />
+                <element signature="e#12758#12816#0" expanded="true" />
+                <element signature="e#12854#12914#0" expanded="true" />
+                <element signature="e#12962#13001#0" expanded="true" />
+                <element signature="e#13073#13114#0" expanded="true" />
+                <element signature="e#13372#13379#0" expanded="true" />
+                <element signature="e#13718#13726#0" expanded="true" />
+                <element signature="e#14026#14035#0" expanded="true" />
+                <element signature="e#15291#15292#0" expanded="true" />
+                <element signature="e#15347#15348#0" expanded="true" />
+                <element signature="e#15661#15662#0" expanded="true" />
+                <element signature="e#15719#15720#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -1768,8 +1766,8 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/integers.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/ConsumerActivity.java" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/ConsumerService.java" />
+        <option value="$PROJECT_DIR$/app/src/main/java/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/ConsumerActivity.java" />
       </list>
     </option>
   </component>
@@ -2198,7 +2196,7 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32893288" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Monitor" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.46864685" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -2258,7 +2256,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="187" column="0" selection-start-line="187" selection-start-column="0" selection-end-line="187" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#0#10211#0" expanded="true" />
+            <element signature="e#9750#9898#0" expanded="true" />
+            <element signature="e#9897#9898#0" expanded="true" />
+            <element signature="e#10052#10200#0" expanded="true" />
+            <element signature="e#10199#10200#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2294,34 +2298,31 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#6246#6284#0" expanded="true" />
-            <element signature="e#8035#8036#0" expanded="true" />
-            <element signature="e#8096#8097#0" expanded="true" />
-            <element signature="e#8552#9166#0" expanded="true" />
-            <element signature="e#9165#9166#0" expanded="true" />
-            <element signature="e#9229#9422#0" expanded="true" />
-            <element signature="e#9421#9422#0" expanded="true" />
-            <element signature="e#9484#9485#0" expanded="true" />
-            <element signature="e#9531#9532#0" expanded="true" />
-            <element signature="e#9596#9597#0" expanded="true" />
-            <element signature="e#9650#9651#0" expanded="true" />
-            <element signature="e#9715#9716#0" expanded="true" />
-            <element signature="e#9747#9748#0" expanded="true" />
-            <element signature="e#10803#10861#0" expanded="true" />
-            <element signature="e#10899#10959#0" expanded="true" />
-            <element signature="e#11007#11046#0" expanded="true" />
-            <element signature="e#11118#11159#0" expanded="true" />
-            <element signature="e#11435#11474#0" expanded="true" />
-            <element signature="e#11502#11543#0" expanded="true" />
-            <element signature="e#11657#11696#0" expanded="true" />
-            <element signature="e#11763#11804#0" expanded="true" />
-            <element signature="e#12043#12050#0" expanded="true" />
-            <element signature="e#12389#12397#0" expanded="true" />
-            <element signature="e#12697#12706#0" expanded="true" />
-            <element signature="e#13962#13963#0" expanded="true" />
-            <element signature="e#14018#14019#0" expanded="true" />
-            <element signature="e#14332#14333#0" expanded="true" />
-            <element signature="e#14390#14391#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#6247#6285#0" expanded="true" />
+            <element signature="e#8744#10403#0" expanded="true" />
+            <element signature="e#10402#10403#0" expanded="true" />
+            <element signature="e#10466#10659#0" expanded="true" />
+            <element signature="e#10658#10659#0" expanded="true" />
+            <element signature="e#10721#10722#0" expanded="true" />
+            <element signature="e#10768#10769#0" expanded="true" />
+            <element signature="e#10833#10834#0" expanded="true" />
+            <element signature="e#10887#10888#0" expanded="true" />
+            <element signature="e#10952#10953#0" expanded="true" />
+            <element signature="e#10984#10985#0" expanded="true" />
+            <element signature="e#12096#12135#0" expanded="true" />
+            <element signature="e#12169#12210#0" expanded="true" />
+            <element signature="e#12758#12816#0" expanded="true" />
+            <element signature="e#12854#12914#0" expanded="true" />
+            <element signature="e#12962#13001#0" expanded="true" />
+            <element signature="e#13073#13114#0" expanded="true" />
+            <element signature="e#13372#13379#0" expanded="true" />
+            <element signature="e#13718#13726#0" expanded="true" />
+            <element signature="e#14026#14035#0" expanded="true" />
+            <element signature="e#15291#15292#0" expanded="true" />
+            <element signature="e#15347#15348#0" expanded="true" />
+            <element signature="e#15661#15662#0" expanded="true" />
+            <element signature="e#15719#15720#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2357,7 +2358,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="37" column="13" selection-start-line="37" selection-start-column="13" selection-end-line="37" selection-end-column="13" />
-          <folding />
+          <folding>
+            <element signature="e#0#10211#0" expanded="true" />
+            <element signature="e#9750#9898#0" expanded="true" />
+            <element signature="e#9897#9898#0" expanded="true" />
+            <element signature="e#10052#10200#0" expanded="true" />
+            <element signature="e#10199#10200#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2442,14 +2449,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/integers.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.7096774">
-          <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.3846154">
@@ -2469,48 +2468,59 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/ConsumerActivity.java">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/integers.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-12.944445">
-          <caret line="204" column="73" selection-start-line="204" selection-start-column="73" selection-end-line="204" selection-end-column="73" />
-          <folding>
-            <element signature="e#6246#6284#0" expanded="true" />
-            <element signature="e#8035#8036#0" expanded="true" />
-            <element signature="e#8096#8097#0" expanded="true" />
-            <element signature="e#8552#9166#0" expanded="true" />
-            <element signature="e#9165#9166#0" expanded="true" />
-            <element signature="e#9229#9422#0" expanded="true" />
-            <element signature="e#9421#9422#0" expanded="true" />
-            <element signature="e#9484#9485#0" expanded="true" />
-            <element signature="e#9531#9532#0" expanded="true" />
-            <element signature="e#9596#9597#0" expanded="true" />
-            <element signature="e#9650#9651#0" expanded="true" />
-            <element signature="e#9715#9716#0" expanded="true" />
-            <element signature="e#9747#9748#0" expanded="true" />
-            <element signature="e#10803#10861#0" expanded="true" />
-            <element signature="e#10899#10959#0" expanded="true" />
-            <element signature="e#11007#11046#0" expanded="true" />
-            <element signature="e#11118#11159#0" expanded="true" />
-            <element signature="e#11435#11474#0" expanded="true" />
-            <element signature="e#11502#11543#0" expanded="true" />
-            <element signature="e#11657#11696#0" expanded="true" />
-            <element signature="e#11763#11804#0" expanded="true" />
-            <element signature="e#12043#12050#0" expanded="true" />
-            <element signature="e#12389#12397#0" expanded="true" />
-            <element signature="e#12697#12706#0" expanded="true" />
-            <element signature="e#13962#13963#0" expanded="true" />
-            <element signature="e#14018#14019#0" expanded="true" />
-            <element signature="e#14332#14333#0" expanded="true" />
-            <element signature="e#14390#14391#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-0.7096774">
+          <caret line="1" column="11" selection-start-line="1" selection-start-column="11" selection-end-line="1" selection-end-column="11" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/ConsumerService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.2532349">
-          <caret line="153" column="61" selection-start-line="153" selection-start-column="61" selection-end-line="153" selection-end-column="61" />
-          <folding />
+        <state vertical-scroll-proportion="10.055555">
+          <caret line="104" column="104" selection-start-line="104" selection-start-column="104" selection-end-line="104" selection-end-column="104" />
+          <folding>
+            <element signature="e#0#10211#0" expanded="true" />
+            <element signature="e#9750#9898#0" expanded="true" />
+            <element signature="e#9897#9898#0" expanded="true" />
+            <element signature="e#10052#10200#0" expanded="true" />
+            <element signature="e#10199#10200#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/com/samsung/android/sdk/accessory/example/helloaccessory/consumer/ConsumerActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3043478">
+          <caret line="297" column="68" selection-start-line="297" selection-start-column="62" selection-end-line="297" selection-end-column="68" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#6247#6285#0" expanded="true" />
+            <element signature="e#8744#10403#0" expanded="true" />
+            <element signature="e#10402#10403#0" expanded="true" />
+            <element signature="e#10466#10659#0" expanded="true" />
+            <element signature="e#10658#10659#0" expanded="true" />
+            <element signature="e#10721#10722#0" expanded="true" />
+            <element signature="e#10768#10769#0" expanded="true" />
+            <element signature="e#10833#10834#0" expanded="true" />
+            <element signature="e#10887#10888#0" expanded="true" />
+            <element signature="e#10952#10953#0" expanded="true" />
+            <element signature="e#10984#10985#0" expanded="true" />
+            <element signature="e#12096#12135#0" expanded="true" />
+            <element signature="e#12169#12210#0" expanded="true" />
+            <element signature="e#12758#12816#0" expanded="true" />
+            <element signature="e#12854#12914#0" expanded="true" />
+            <element signature="e#12962#13001#0" expanded="true" />
+            <element signature="e#13073#13114#0" expanded="true" />
+            <element signature="e#13372#13379#0" expanded="true" />
+            <element signature="e#13718#13726#0" expanded="true" />
+            <element signature="e#14026#14035#0" expanded="true" />
+            <element signature="e#15291#15292#0" expanded="true" />
+            <element signature="e#15347#15348#0" expanded="true" />
+            <element signature="e#15661#15662#0" expanded="true" />
+            <element signature="e#15719#15720#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

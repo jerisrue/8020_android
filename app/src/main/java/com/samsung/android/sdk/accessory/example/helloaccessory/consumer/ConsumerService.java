@@ -102,8 +102,8 @@ public class ConsumerService extends SAAgent {
         if (result == SAAgent.CONNECTION_SUCCESS) {
             this.mConnectionHandler = (ServiceConnection) socket;
             updateTextView("Connected");
-            Toast.makeText(getApplicationContext(), "New Connection", Toast.LENGTH_LONG).show();
-            Toast.makeText(getApplicationContext(), "PeerAgent max size" + peerAgent.getMaxAllowedDataSize(), Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Connection Successful", Toast.LENGTH_SHORT).show();
+            //Toast.makeText(getApplicationContext(), "PeerAgent max size" + peerAgent.getMaxAllowedDataSize(), Toast.LENGTH_LONG).show();
         } else if (result == SAAgent.CONNECTION_ALREADY_EXIST) {
             updateTextView("Connected");
             //Toast.makeText(getApplicationContext(), "Connection Exists", Toast.LENGTH_LONG).show();
@@ -150,7 +150,7 @@ public class ConsumerService extends SAAgent {
         @Override
         public void onReceive(int channelId, byte[] data) {
             final String message = new String(data);
-            addMessage("Received: ", message);
+            addMessage("Received:", message);
             Toast.makeText(getApplicationContext(), "Received:" + message, Toast.LENGTH_SHORT).show();
         }
 

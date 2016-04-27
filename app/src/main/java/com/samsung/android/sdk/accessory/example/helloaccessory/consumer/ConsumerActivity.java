@@ -65,6 +65,7 @@ public class ConsumerActivity extends Activity implements OnChartGestureListener
     private ListView mMessageListView;
     private ConsumerService mConsumerService = null;
 
+
     private PieChart mChart;
 
     @Override
@@ -151,7 +152,9 @@ public class ConsumerActivity extends Activity implements OnChartGestureListener
                 if (mIsBound == true && mConsumerService != null) {
                     if (mConsumerService.sendData("Healthy=9,Unhealthy=1")) {
                     } else {
-                        Toast.makeText(getApplicationContext(), "Not connected: unable to send", Toast.LENGTH_LONG).show();
+                        Toast.makeText(getApplicationContext(), "Not connected: unable to send. Reconnecting...", Toast.LENGTH_LONG).show();
+                        //Reconnect to gear
+                        mConsumerService.findPeers();
                     }
                 }
                 break;
@@ -165,11 +168,11 @@ public class ConsumerActivity extends Activity implements OnChartGestureListener
         public void onServiceConnected(ComponentName className, IBinder service) {
             mConsumerService = ((ConsumerService.LocalBinder) service).getService();
             //updateTextView("onServiceConnected");
-            Toast.makeText(getApplicationContext(), "Connected to Service", Toast.LENGTH_LONG).show();
+            //Toast.makeText(getApplicationContext(), "Connected to Service", Toast.LENGTH_LONG).show();
 
             //Auto connect to device when app is launched.
-            mConsumerService.findPeers();
-            Toast.makeText(getApplicationContext(), "Auto Connecting", Toast.LENGTH_LONG).show();
+            //mConsumerService.findPeers();
+            //Toast.makeText(getApplicationContext(), "Auto Connecting", Toast.LENGTH_LONG).show();
         }
 
         @Override
@@ -182,7 +185,9 @@ public class ConsumerActivity extends Activity implements OnChartGestureListener
     };
 
     public static void addMessage(String data) {
-        mMessageAdapter.addMessage(new Message(data));
+
+        //Need to pass to Message Adapter because of static method
+        //mMessageAdapter.addMessage(new Message(data));
     }
 
     public static void updateTextView(final String str) {
@@ -202,7 +207,30 @@ public class ConsumerActivity extends Activity implements OnChartGestureListener
                 @Override
                 public void run() {
 
+                    String data = msg.data;
                     //Parse "Received" message from Gear and call setData
+                    Log.i("receivedGear", "Received(string): " + data);
+                    //Received:Healthy=9,Unhealthy=1
+
+                    String delims = "[:]";
+                    String[] tokens = data.split(delims);
+                    delims = "[,]";
+                    tokens = tokens[1].split(delims);
+                    delims = "[=]";
+                    for (int i=0; i<tokens.length; i++) {
+                        String[] bucket = tokens[i].split(delims);
+                        tokens[i] = bucket[1];
+                    }
+                    for (int i=0; i<tokens.length; i++) {
+                        System.out.println("Number = " + tokens[i]);
+                    }
+
+                    //Open Shared Pref for saving data
+                    SharedPreferences sharedPrefsStore = getPreferences(Context.MODE_PRIVATE);
+
+                    //Pass result to setData
+                    setData( sharedPrefsStore, Integer.parseInt(tokens[0]), Integer.parseInt(tokens[1]) );
+
 
                     //this added messages to message list
                     /*if (mMessages.size() == MAX_MESSAGES_TO_DISPLAY) {
@@ -265,13 +293,30 @@ public class ConsumerActivity extends Activity implements OnChartGestureListener
         }
     }
 
+    private void setData(SharedPreferences sharedPref, int healthy, int unhealthy) {
+
+        Toast.makeText(getApplicationContext(), "I am getting called", Toast.LENGTH_LONG).show();
+
+        //Add Values to shared preferences
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putInt(getString(R.string.saved_healthy_value), healthy);
+        editor.putInt(getString(R.string.saved_unhealthy_value), unhealthy);
+        editor.apply();
+
+        Log.i("healthyValue", "healthy: " + healthy);
+        Log.i("unHealthyValue", "unHealthy: " + unhealthy);
+
+        //Call to update data in chart
+        setData(sharedPref);
+    }
+
     private void setData(SharedPreferences sharedPref) {
     //int count, float range
 
         //Open Share Pref
         //SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
 
-        //Should be default
+        //Should be default or updated if received info from gear or if previous run of app
         int defaultHealthyValue = getResources().getInteger(R.integer.saved_healthy_default);
         int defaultUnhealthyValue = getResources().getInteger(R.integer.saved_unhealthy_default);
         long healthyValue = sharedPref.getInt(getString(R.string.saved_healthy_value), defaultHealthyValue);
@@ -279,17 +324,6 @@ public class ConsumerActivity extends Activity implements OnChartGestureListener
         Log.i("healthyValue", "healthyValue(default): " + healthyValue);
         Log.i("unHealthyValue", "unHealthyValue(default): " + unHealthyValue);
 
-        //Add
-        SharedPreferences.Editor editor = sharedPref.edit();
-        editor.putInt(getString(R.string.saved_healthy_value), 8);
-        editor.putInt(getString(R.string.saved_unhealthy_value), 2);
-        editor.commit();
-
-        //Should now reflect added value
-        healthyValue = sharedPref.getInt(getString(R.string.saved_healthy_value), defaultHealthyValue);
-        unHealthyValue = sharedPref.getInt(getString(R.string.saved_unhealthy_value), defaultUnhealthyValue);
-        Log.i("healthyValue", "healthyValue: " + healthyValue);
-        Log.i("unHealthyValue", "unHealthyValue: " + unHealthyValue);
 
         //float mult = range;
 

@@ -32,6 +32,7 @@ import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.IBinder;
@@ -65,8 +66,6 @@ public class ConsumerActivity extends Activity implements OnChartGestureListener
     private ConsumerService mConsumerService = null;
 
     private PieChart mChart;
-    //private PieChart mChart2;
-    //private Typeface tf;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,54 +78,32 @@ public class ConsumerActivity extends Activity implements OnChartGestureListener
         // Bind service
         mIsBound = bindService(new Intent(ConsumerActivity.this, ConsumerService.class), mConnection, Context.BIND_AUTO_CREATE);
 
-        //Pie Chart
+        //Open Shared Pref for saving data
+        SharedPreferences sharedPrefStore = getPreferences(Context.MODE_PRIVATE);
+
+        //Draw Pie Chart
         mChart = (PieChart) findViewById(R.id.chart1);
         mChart.setHardwareAccelerationEnabled(true);
         mChart.setUsePercentValues(true);
         mChart.setDescription("");
         mChart.setExtraOffsets(5, 10, 5, 5);
-
-        //mChart.setDragDecelerationFrictionCoef(0.95f);
-
-        //tf = Typeface.createFromAsset(getAssets(), "OpenSans-Regular.ttf");
-
-        //mChart.setCenterTextTypeface(Typeface.createFromAsset(getAssets(), "OpenSans-Light.ttf"));
-        //mChart.setCenterText(generateCenterSpannableText());
-
+        //Disable the hole
         mChart.setDrawHoleEnabled(false);
-        //mChart.setHoleColor(Color.WHITE);
-
-        //mChart.setTransparentCircleColor(Color.WHITE);
-        //mChart.setTransparentCircleAlpha(110);
-
-        //mChart.setHoleRadius(58f);
-        //mChart.setTransparentCircleRadius(61f);
-
-        //mChart.setDrawCenterText(true);
-
-        mChart.setRotationAngle(180);
+        //Align slices correctly
+        mChart.setRotationAngle(270);
         // enable rotation of the chart by touch
         mChart.setRotationEnabled(false);
         mChart.setHighlightPerTapEnabled(false);
-
-        // mChart.setUnit(" €");
-        // mChart.setDrawUnitsInChart(true);
-
         // add a selection listener
         //mChart.setOnChartValueSelectedListener(this);
-
         // add a gesture listener
         mChart.setOnChartGestureListener(this);
-
-        setData(3, 100);
-
+        //Set data for chart
+        setData(sharedPrefStore);
+        //Cool spinny thing when loading
         mChart.animateY(1400, Easing.EasingOption.EaseInOutQuad);
-        // mChart.spin(2000, 0, 360);
-
+        //Disable Legend
         Legend l = mChart.getLegend();
-        /*l.setPosition(Legend.LegendPosition.RIGHT_OF_CHART);
-        l.setXEntrySpace(7f);
-        l.setYEntrySpace(0f);*/
         l.setEnabled(false);
 
     }
@@ -136,7 +113,7 @@ public class ConsumerActivity extends Activity implements OnChartGestureListener
         // Clean up connections
         if (mIsBound == true && mConsumerService != null) {
             if (mConsumerService.closeConnection() == false) {
-                updateTextView("Disconnected");
+                //updateTextView("Disconnected");
                 Toast.makeText(getApplicationContext(), "onDestroy cleaning up", Toast.LENGTH_LONG).show();
                 mMessageAdapter.clear();
             }
@@ -161,7 +138,7 @@ public class ConsumerActivity extends Activity implements OnChartGestureListener
             case R.id.buttonDisconnect: {
                 if (mIsBound == true && mConsumerService != null) {
                     if (mConsumerService.closeConnection() == false) {
-                        updateTextView("Disconnected");
+                        //updateTextView("Disconnected");
                         Toast.makeText(getApplicationContext(), R.string.ConnectionAlreadyDisconnected, Toast.LENGTH_LONG).show();
                         mMessageAdapter.clear();
                     } else {
@@ -172,7 +149,7 @@ public class ConsumerActivity extends Activity implements OnChartGestureListener
             }
             case R.id.buttonSend: {
                 if (mIsBound == true && mConsumerService != null) {
-                    if (mConsumerService.sendData("Hello Accessory!")) {
+                    if (mConsumerService.sendData("Healthy=9,Unhealthy=1")) {
                     } else {
                         Toast.makeText(getApplicationContext(), "Not connected: unable to send", Toast.LENGTH_LONG).show();
                     }
@@ -187,7 +164,7 @@ public class ConsumerActivity extends Activity implements OnChartGestureListener
         @Override
         public void onServiceConnected(ComponentName className, IBinder service) {
             mConsumerService = ((ConsumerService.LocalBinder) service).getService();
-            updateTextView("onServiceConnected");
+            //updateTextView("onServiceConnected");
             Toast.makeText(getApplicationContext(), "Connected to Service", Toast.LENGTH_LONG).show();
 
             //Auto connect to device when app is launched.
@@ -199,7 +176,7 @@ public class ConsumerActivity extends Activity implements OnChartGestureListener
         public void onServiceDisconnected(ComponentName className) {
             mConsumerService = null;
             mIsBound = false;
-            updateTextView("onServiceDisconnected");
+            //updateTextView("onServiceDisconnected");
             Toast.makeText(getApplicationContext(), "Disonnected from Service", Toast.LENGTH_LONG).show();
         }
     };
@@ -224,14 +201,18 @@ public class ConsumerActivity extends Activity implements OnChartGestureListener
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    if (mMessages.size() == MAX_MESSAGES_TO_DISPLAY) {
+
+                    //Parse "Received" message from Gear and call setData
+
+                    //this added messages to message list
+                    /*if (mMessages.size() == MAX_MESSAGES_TO_DISPLAY) {
                         mMessages.remove(0);
                         mMessages.add(msg);
                     } else {
                         mMessages.add(msg);
                     }
                     notifyDataSetChanged();
-                    mMessageListView.setSelection(getCount() - 1);
+                    mMessageListView.setSelection(getCount() - 1);*/
                 }
             });
         }
@@ -284,58 +265,57 @@ public class ConsumerActivity extends Activity implements OnChartGestureListener
         }
     }
 
-    private void setData(int count, float range) {
+    private void setData(SharedPreferences sharedPref) {
+    //int count, float range
 
-        float mult = range;
+        //Open Share Pref
+        //SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+
+        //Should be default
+        int defaultHealthyValue = getResources().getInteger(R.integer.saved_healthy_default);
+        int defaultUnhealthyValue = getResources().getInteger(R.integer.saved_unhealthy_default);
+        long healthyValue = sharedPref.getInt(getString(R.string.saved_healthy_value), defaultHealthyValue);
+        long unHealthyValue = sharedPref.getInt(getString(R.string.saved_unhealthy_value), defaultUnhealthyValue);
+        Log.i("healthyValue", "healthyValue(default): " + healthyValue);
+        Log.i("unHealthyValue", "unHealthyValue(default): " + unHealthyValue);
+
+        //Add
+        SharedPreferences.Editor editor = sharedPref.edit();
+        editor.putInt(getString(R.string.saved_healthy_value), 8);
+        editor.putInt(getString(R.string.saved_unhealthy_value), 2);
+        editor.commit();
+
+        //Should now reflect added value
+        healthyValue = sharedPref.getInt(getString(R.string.saved_healthy_value), defaultHealthyValue);
+        unHealthyValue = sharedPref.getInt(getString(R.string.saved_unhealthy_value), defaultUnhealthyValue);
+        Log.i("healthyValue", "healthyValue: " + healthyValue);
+        Log.i("unHealthyValue", "unHealthyValue: " + unHealthyValue);
+
+        //float mult = range;
 
         ArrayList<Entry> yVals1 = new ArrayList<Entry>();
 
         // IMPORTANT: In a PieChart, no values (Entry) should have the same
         // xIndex (even if from different DataSets), since no values can be
         // drawn above each other.
-        /*for (int i = 0; i < count + 1; i++) {
-            yVals1.add(new Entry((float) (Math.random() * mult) + mult / 5, i));
-        }*/
-        yVals1.add(new Entry((float) 20, 1));
-        yVals1.add(new Entry((float) 80, 2));
+        yVals1.add(new Entry(healthyValue, 1));
+        yVals1.add(new Entry(unHealthyValue, 2));
 
 
         ArrayList<String> xVals = new ArrayList<String>();
-
-        /*for (int i = 0; i < count + 1; i++)
-            xVals.add(mParties[i % mParties.length]);*/
-        xVals.add("Unhealthy");
         xVals.add("Healthy");
+        xVals.add("Unhealthy");
 
         PieDataSet dataSet = new PieDataSet(yVals1, "Election Results");
         dataSet.setSliceSpace(3f);
         dataSet.setSelectionShift(5f);
 
-        // add a lot of colors
 
+        //Add colors for the chart
         ArrayList<Integer> colors = new ArrayList<Integer>();
-
-        /*for (int c : ColorTemplate.VORDIPLOM_COLORS)
-            colors.add(c);
-
-        for (int c : ColorTemplate.JOYFUL_COLORS)
-            colors.add(c);
-
-        for (int c : ColorTemplate.COLORFUL_COLORS)
-            colors.add(c);
-
-        for (int c : ColorTemplate.LIBERTY_COLORS)
-            colors.add(c);
-
-        for (int c : ColorTemplate.PASTEL_COLORS)
-            colors.add(c);
-
-        colors.add(ColorTemplate.getHoloBlue());*/
-        colors.add(Color.RED);
         colors.add(Color.GREEN);
-
+        colors.add(Color.RED);
         dataSet.setColors(colors);
-        //dataSet.setSelectionShift(0f);
 
         PieData data = new PieData(xVals, dataSet);
         data.setValueFormatter(new PercentFormatter());
@@ -373,7 +353,9 @@ public class ConsumerActivity extends Activity implements OnChartGestureListener
 
     @Override
     public void onChartSingleTapped(MotionEvent me) {
+
         Log.i("SingleTap", "Chart single-tapped.");
+        Log.i("SingleTap", "Me:" + me);
     }
 
 

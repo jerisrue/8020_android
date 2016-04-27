@@ -103,6 +103,7 @@ public class ConsumerService extends SAAgent {
             this.mConnectionHandler = (ServiceConnection) socket;
             updateTextView("Connected");
             Toast.makeText(getApplicationContext(), "New Connection", Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "PeerAgent max size" + peerAgent.getMaxAllowedDataSize(), Toast.LENGTH_LONG).show();
         } else if (result == SAAgent.CONNECTION_ALREADY_EXIST) {
             updateTextView("Connected");
             //Toast.makeText(getApplicationContext(), "Connection Exists", Toast.LENGTH_LONG).show();
@@ -150,7 +151,7 @@ public class ConsumerService extends SAAgent {
         public void onReceive(int channelId, byte[] data) {
             final String message = new String(data);
             addMessage("Received: ", message);
-            Toast.makeText(getApplicationContext(), "Received Test:" + message, Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "Received:" + message, Toast.LENGTH_SHORT).show();
         }
 
         @Override
@@ -179,9 +180,10 @@ public class ConsumerService extends SAAgent {
                 retvalue = true;
             } catch (IOException e) {
                 e.printStackTrace();
+                Toast.makeText(getApplicationContext(), "Error sending to Gear" + e, Toast.LENGTH_LONG).show();
             }
-            addMessage("Sent: ", data);
-            Toast.makeText(getApplicationContext(), "Sent Test:" + data, Toast.LENGTH_SHORT).show();
+            //addMessage("Sent: ", data);  //No need to return to UI what was sent as long as using toast below
+            Toast.makeText(getApplicationContext(), "Sent:" + data, Toast.LENGTH_SHORT).show();
         }
         return retvalue;
     }

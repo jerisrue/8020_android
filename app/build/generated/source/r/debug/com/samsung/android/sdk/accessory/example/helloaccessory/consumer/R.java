@@ -1700,7 +1700,9 @@ containing a value of this type.
         public static final int abc_config_activityShortDur=0x7f0b0002;
         public static final int abc_max_action_buttons=0x7f0b0000;
         public static final int cancel_button_image_alpha=0x7f0b0003;
-        public static final int status_bar_notification_info_maxnum=0x7f0b0004;
+        public static final int saved_healthy_default=0x7f0b0004;
+        public static final int saved_unhealthy_default=0x7f0b0005;
+        public static final int status_bar_notification_info_maxnum=0x7f0b0006;
     }
     public static final class layout {
         public static final int abc_action_bar_title_item=0x7f040000;
@@ -1778,6 +1780,8 @@ containing a value of this type.
         public static final int buttonDisconnect=0x7f07001d;
         public static final int buttonSend=0x7f07001e;
         public static final int hello_world=0x7f07001f;
+        public static final int saved_healthy_value=0x7f070020;
+        public static final int saved_unhealthy_value=0x7f070021;
         public static final int status_bar_notification_info_overflow=0x7f070013;
     }
     public static final class style {

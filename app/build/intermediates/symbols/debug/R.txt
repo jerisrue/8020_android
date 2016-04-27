@@ -544,7 +544,9 @@ int integer abc_config_activityDefaultDur 0x7f0b0001
 int integer abc_config_activityShortDur 0x7f0b0002
 int integer abc_max_action_buttons 0x7f0b0000
 int integer cancel_button_image_alpha 0x7f0b0003
-int integer status_bar_notification_info_maxnum 0x7f0b0004
+int integer saved_healthy_default 0x7f0b0004
+int integer saved_unhealthy_default 0x7f0b0005
+int integer status_bar_notification_info_maxnum 0x7f0b0006
 int layout abc_action_bar_title_item 0x7f040000
 int layout abc_action_bar_up_container 0x7f040001
 int layout abc_action_bar_view_list_nav_layout 0x7f040002
@@ -616,6 +618,8 @@ int string buttonConnect 0x7f07001c
 int string buttonDisconnect 0x7f07001d
 int string buttonSend 0x7f07001e
 int string hello_world 0x7f07001f
+int string saved_healthy_value 0x7f070020
+int string saved_unhealthy_value 0x7f070021
 int string status_bar_notification_info_overflow 0x7f070013
 int style AlertDialog_AppCompat 0x7f0a007d
 int style AlertDialog_AppCompat_Light 0x7f0a007e

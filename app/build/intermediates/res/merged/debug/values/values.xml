@@ -220,8 +220,10 @@
     <string name="abc_shareactionprovider_share_with_application">Share with %s</string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="app_name">80/20</string>
+    <string name="buttoIncHe">+Healthy</string>
     <string name="buttonConnect">Connect</string>
     <string name="buttonDisconnect">Disconnect</string>
+    <string name="buttonIncUn">+Unhealthy</string>
     <string name="buttonSend">Send</string>
     <string name="hello_world">Hello Accessory!</string>
     <string name="saved_healthy_value">savaDaHealthyValue</string>

@@ -12,6 +12,8 @@
     <string name="buttonConnect">Connect</string>
     <string name="buttonDisconnect">Disconnect</string>
     <string name="buttonSend">Send</string>
+    <string name="buttoIncHe">+Healthy</string>
+    <string name="buttonIncUn">+Unhealthy</string>
 
     <string name="saved_healthy_value">savaDaHealthyValue</string>
     <string name="saved_unhealthy_value">savaDaUnhealthyValue</string>

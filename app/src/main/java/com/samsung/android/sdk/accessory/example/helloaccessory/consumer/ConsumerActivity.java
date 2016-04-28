@@ -129,7 +129,46 @@ public class ConsumerActivity extends Activity implements OnChartGestureListener
     }
 
     public void mOnClick(View v) {
+        //Open Share Pref
+        SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+
         switch (v.getId()) {
+            case R.id.buttonIncHe: {
+                if (mIsBound == true && mConsumerService != null) {
+                    //mConsumerService.findPeers();
+                    Toast.makeText(getApplicationContext(), "IncHe", Toast.LENGTH_LONG).show();
+
+                    //Should be default or updated if received info from gear or if previous run of app
+                    int defaultHealthyValue = getResources().getInteger(R.integer.saved_healthy_default);
+                    int defaultUnhealthyValue = getResources().getInteger(R.integer.saved_unhealthy_default);
+                    int healthyValue = sharedPref.getInt(getString(R.string.saved_healthy_value), defaultHealthyValue);
+                    int unHealthyValue = sharedPref.getInt(getString(R.string.saved_unhealthy_value), defaultUnhealthyValue);
+                    Log.i("healthyValue", "healthyValue(default): " + healthyValue);
+                    Log.i("unHealthyValue", "unHealthyValue(default): " + unHealthyValue);
+
+                    //Pass result to setData
+                    setData( sharedPref, healthyValue + 1, unHealthyValue);
+                }
+                break;
+            }
+            case R.id.buttonIncUn: {
+                if (mIsBound == true && mConsumerService != null) {
+                    //mConsumerService.findPeers();
+                    Toast.makeText(getApplicationContext(), "IncUn", Toast.LENGTH_LONG).show();
+
+                    //Should be default or updated if received info from gear or if previous run of app
+                    int defaultHealthyValue = getResources().getInteger(R.integer.saved_healthy_default);
+                    int defaultUnhealthyValue = getResources().getInteger(R.integer.saved_unhealthy_default);
+                    int healthyValue = sharedPref.getInt(getString(R.string.saved_healthy_value), defaultHealthyValue);
+                    int unHealthyValue = sharedPref.getInt(getString(R.string.saved_unhealthy_value), defaultUnhealthyValue);
+                    Log.i("healthyValue", "healthyValue(default): " + healthyValue);
+                    Log.i("unHealthyValue", "unHealthyValue(default): " + unHealthyValue);
+
+                    //Pass result to setData
+                    setData( sharedPref, healthyValue, unHealthyValue + 1);
+                }
+                break;
+            }
             case R.id.buttonConnect: {
                 if (mIsBound == true && mConsumerService != null) {
                     mConsumerService.findPeers();
@@ -150,7 +189,7 @@ public class ConsumerActivity extends Activity implements OnChartGestureListener
             }
             case R.id.buttonSend: {
                 if (mIsBound == true && mConsumerService != null) {
-                    if (mConsumerService.sendData("Healthy=9,Unhealthy=1")) {
+                    if (mConsumerService.sendData("Healthy=8,Unhealthy=2")) {
                     } else {
                         Toast.makeText(getApplicationContext(), "Not connected: unable to send. Reconnecting...", Toast.LENGTH_LONG).show();
                         //Reconnect to gear
@@ -187,7 +226,7 @@ public class ConsumerActivity extends Activity implements OnChartGestureListener
     public static void addMessage(String data) {
 
         //Need to pass to Message Adapter because of static method
-        //mMessageAdapter.addMessage(new Message(data));
+        mMessageAdapter.addMessage(new Message(data));
     }
 
     public static void updateTextView(final String str) {
@@ -295,7 +334,7 @@ public class ConsumerActivity extends Activity implements OnChartGestureListener
 
     private void setData(SharedPreferences sharedPref, int healthy, int unhealthy) {
 
-        Toast.makeText(getApplicationContext(), "I am getting called", Toast.LENGTH_LONG).show();
+        //Toast.makeText(getApplicationContext(), "I am getting called", Toast.LENGTH_LONG).show();
 
         //Add Values to shared preferences
         SharedPreferences.Editor editor = sharedPref.edit();
@@ -319,8 +358,8 @@ public class ConsumerActivity extends Activity implements OnChartGestureListener
         //Should be default or updated if received info from gear or if previous run of app
         int defaultHealthyValue = getResources().getInteger(R.integer.saved_healthy_default);
         int defaultUnhealthyValue = getResources().getInteger(R.integer.saved_unhealthy_default);
-        long healthyValue = sharedPref.getInt(getString(R.string.saved_healthy_value), defaultHealthyValue);
-        long unHealthyValue = sharedPref.getInt(getString(R.string.saved_unhealthy_value), defaultUnhealthyValue);
+        int healthyValue = sharedPref.getInt(getString(R.string.saved_healthy_value), defaultHealthyValue);
+        int unHealthyValue = sharedPref.getInt(getString(R.string.saved_unhealthy_value), defaultUnhealthyValue);
         Log.i("healthyValue", "healthyValue(default): " + healthyValue);
         Log.i("unHealthyValue", "unHealthyValue(default): " + unHealthyValue);
 

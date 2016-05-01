@@ -8,10 +8,6 @@
         "source": "C:\\Users\\ruejer01\\AndroidStudioProjects\\eightytwenty_android2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\select_dialog_item_material.xml"
     },
     {
-        "merged": "C:\\Users\\ruejer01\\AndroidStudioProjects\\eightytwenty_android2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\test_activity.xml",
-        "source": "C:\\Users\\ruejer01\\AndroidStudioProjects\\eightytwenty_android2\\app\\src\\main\\res\\layout\\test_activity.xml"
-    },
-    {
         "merged": "C:\\Users\\ruejer01\\AndroidStudioProjects\\eightytwenty_android2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
         "source": "C:\\Users\\ruejer01\\AndroidStudioProjects\\eightytwenty_android2\\app\\src\\main\\res\\layout\\activity_main.xml"
     },
@@ -56,12 +52,12 @@
         "source": "C:\\Users\\ruejer01\\AndroidStudioProjects\\eightytwenty_android2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_screen_simple_overlay_action_mode.xml"
     },
     {
-        "merged": "C:\\Users\\ruejer01\\AndroidStudioProjects\\eightytwenty_android2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
-        "source": "C:\\Users\\ruejer01\\AndroidStudioProjects\\eightytwenty_android2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
-    },
-    {
         "merged": "C:\\Users\\ruejer01\\AndroidStudioProjects\\eightytwenty_android2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_subheader.xml",
         "source": "C:\\Users\\ruejer01\\AndroidStudioProjects\\eightytwenty_android2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.3.0\\res\\layout\\design_navigation_item_subheader.xml"
+    },
+    {
+        "merged": "C:\\Users\\ruejer01\\AndroidStudioProjects\\eightytwenty_android2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_button_bar_material.xml",
+        "source": "C:\\Users\\ruejer01\\AndroidStudioProjects\\eightytwenty_android2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_alert_dialog_button_bar_material.xml"
     },
     {
         "merged": "C:\\Users\\ruejer01\\AndroidStudioProjects\\eightytwenty_android2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_alert_dialog_material.xml",
@@ -156,12 +152,12 @@
         "source": "C:\\Users\\ruejer01\\AndroidStudioProjects\\eightytwenty_android2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\23.3.0\\res\\layout\\design_layout_snackbar_include.xml"
     },
     {
-        "merged": "C:\\Users\\ruejer01\\AndroidStudioProjects\\eightytwenty_android2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
-        "source": "C:\\Users\\ruejer01\\AndroidStudioProjects\\eightytwenty_android2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_list_menu_item_layout.xml"
-    },
-    {
         "merged": "C:\\Users\\ruejer01\\AndroidStudioProjects\\eightytwenty_android2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_action_menu_item_layout.xml",
         "source": "C:\\Users\\ruejer01\\AndroidStudioProjects\\eightytwenty_android2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_action_menu_item_layout.xml"
+    },
+    {
+        "merged": "C:\\Users\\ruejer01\\AndroidStudioProjects\\eightytwenty_android2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_layout.xml",
+        "source": "C:\\Users\\ruejer01\\AndroidStudioProjects\\eightytwenty_android2\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\23.3.0\\res\\layout\\abc_list_menu_item_layout.xml"
     },
     {
         "merged": "C:\\Users\\ruejer01\\AndroidStudioProjects\\eightytwenty_android2\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_search_dropdown_item_icons_2line.xml",

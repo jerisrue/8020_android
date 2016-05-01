@@ -19,4 +19,14 @@ tools:context=".ConsumerActivity">
         android:orderInCategory="100"
         android:title="@string/action_send"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/action_negHealthy"
+        android:orderInCategory="100"
+        android:title="@string/action_negHealthy"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_negUnhealthy"
+        android:orderInCategory="100"
+        android:title="@string/action_negUnhealthy"
+        app:showAsAction="never" />
 </menu>

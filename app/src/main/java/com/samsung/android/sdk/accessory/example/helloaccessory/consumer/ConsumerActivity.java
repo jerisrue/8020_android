@@ -27,7 +27,6 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import android.app.Activity;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -53,12 +52,10 @@ import android.widget.Toast;
 import com.github.mikephil.charting.charts.PieChart;
 import com.github.mikephil.charting.animation.Easing;
 import com.github.mikephil.charting.components.Legend;
-import com.github.mikephil.charting.components.ComponentBase;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.PieData;
 import com.github.mikephil.charting.data.PieDataSet;
 import com.github.mikephil.charting.formatter.PercentFormatter;
-import com.github.mikephil.charting.highlight.Highlight;
 import com.github.mikephil.charting.listener.ChartTouchListener;
 import com.github.mikephil.charting.listener.OnChartGestureListener;
 
@@ -76,7 +73,7 @@ public class ConsumerActivity extends AppCompatActivity implements OnChartGestur
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.test_activity);
+        setContentView(R.layout.activity_main);
 
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -109,7 +106,7 @@ public class ConsumerActivity extends AppCompatActivity implements OnChartGestur
         // add a gesture listener
         mChart.setOnChartGestureListener(this);
         //Set data for chart
-        setData(sharedPrefStore);
+        setChartData(sharedPrefStore);
         //Cool spinny thing when loading
         mChart.animateY(1400, Easing.EasingOption.EaseInOutQuad);
         //Disable Legend
@@ -137,7 +134,35 @@ public class ConsumerActivity extends AppCompatActivity implements OnChartGestur
         super.onDestroy();
     }
 
+    public class SavedData {
+        public int healthy = 0;
+        public int unhealthy = 0;
+        //constructor
+        public SavedData(int a, int b) {
+            healthy = a;
+            unhealthy = b;
+        }
+    }
+
+    private SavedData getValues (){
+        //Open Share Pref
+        SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
+
+        //Should be default or updated if received info from gear or if previous run of app
+        int defaultHealthyValue = getResources().getInteger(R.integer.saved_healthy_default);
+        int defaultUnhealthyValue = getResources().getInteger(R.integer.saved_unhealthy_default);
+        int healthyValue = sharedPref.getInt(getString(R.string.saved_healthy_value), defaultHealthyValue);
+        int unHealthyValue = sharedPref.getInt(getString(R.string.saved_unhealthy_value), defaultUnhealthyValue);
+        Log.i("healthyValue", "healthyValue(default): " + healthyValue);
+        Log.i("unHealthyValue", "unHealthyValue(default): " + unHealthyValue);
+
+        //Instantiate SavedData object
+        SavedData savedValues = new SavedData(healthyValue,unHealthyValue);
+        return  savedValues;
+
+    }
     public void mOnClick(View v) {
+        SavedData currentData;
         //Open Share Pref
         SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
 
@@ -145,82 +170,26 @@ public class ConsumerActivity extends AppCompatActivity implements OnChartGestur
             case R.id.buttonIncHe: {
                 if (mIsBound == true && mConsumerService != null) {
 
-                    //Should be default or updated if received info from gear or if previous run of app
-                    int defaultHealthyValue = getResources().getInteger(R.integer.saved_healthy_default);
-                    int defaultUnhealthyValue = getResources().getInteger(R.integer.saved_unhealthy_default);
-                    int healthyValue = sharedPref.getInt(getString(R.string.saved_healthy_value), defaultHealthyValue);
-                    int unHealthyValue = sharedPref.getInt(getString(R.string.saved_unhealthy_value), defaultUnhealthyValue);
-                    Log.i("healthyValue", "healthyValue(default): " + healthyValue);
-                    Log.i("unHealthyValue", "unHealthyValue(default): " + unHealthyValue);
+                    //Get Saved Values
+                    currentData = getValues();
+                    //Pass result to setChartData
+                    setChartData( sharedPref, currentData.healthy + 1, currentData.unhealthy);
 
-                    //Pass result to setData
-                    setData( sharedPref, healthyValue + 1, unHealthyValue);
+                    //send update to gear
+                    sendData(sharedPref);
                 }
                 break;
             }
             case R.id.buttonIncUn: {
                 if (mIsBound == true && mConsumerService != null) {
 
-                    //Should be default or updated if received info from gear or if previous run of app
-                    int defaultHealthyValue = getResources().getInteger(R.integer.saved_healthy_default);
-                    int defaultUnhealthyValue = getResources().getInteger(R.integer.saved_unhealthy_default);
-                    int healthyValue = sharedPref.getInt(getString(R.string.saved_healthy_value), defaultHealthyValue);
-                    int unHealthyValue = sharedPref.getInt(getString(R.string.saved_unhealthy_value), defaultUnhealthyValue);
-                    Log.i("healthyValue", "healthyValue(default): " + healthyValue);
-                    Log.i("unHealthyValue", "unHealthyValue(default): " + unHealthyValue);
+                    //Get Saved Values
+                    currentData = getValues();
+                    //Pass result to setChartData
+                    setChartData( sharedPref, currentData.healthy, currentData.unhealthy + 1);
 
-                    //Pass result to setData
-                    setData( sharedPref, healthyValue, unHealthyValue + 1);
-                }
-                break;
-            }
-            case R.id.buttonConnect: {
-                if (mIsBound == true && mConsumerService != null) {
-                    mConsumerService.findPeers();
-                }
-                break;
-            }
-            case R.id.buttonDisconnect: {
-                if (mIsBound == true && mConsumerService != null) {
-                    if (mConsumerService.closeConnection() == false) {
-                        //updateTextView("Disconnected");
-                        Toast.makeText(getApplicationContext(), R.string.ConnectionAlreadyDisconnected, Toast.LENGTH_LONG).show();
-                        mMessageAdapter.clear();
-                    } else {
-                        Toast.makeText(getApplicationContext(), "Disconnecting", Toast.LENGTH_LONG).show();
-                    }
-                }
-                break;
-            }
-            case R.id.buttonSend: {
-                if (mIsBound == true && mConsumerService != null) {
-
-                    //Should be default or updated if received info from gear or if previous run of app
-                    int defaultHealthyValue = getResources().getInteger(R.integer.saved_healthy_default);
-                    int defaultUnhealthyValue = getResources().getInteger(R.integer.saved_unhealthy_default);
-                    int healthyValue = sharedPref.getInt(getString(R.string.saved_healthy_value), defaultHealthyValue);
-                    int unHealthyValue = sharedPref.getInt(getString(R.string.saved_unhealthy_value), defaultUnhealthyValue);
-                    Log.i("healthyValue", "healthyValue(toSend): " + healthyValue);
-                    Log.i("unHealthyValue", "unHealthyValue(toSend): " + unHealthyValue);
-
-                    String data = "Healthy=" + healthyValue + ",Unhealthy=" + unHealthyValue;
-
-                    //boolean flag = false;
-                    //for (int i=0; i<3; i++) {
-                        if (mConsumerService.sendData(data)) {
-                            //break;
-                        } else {
-                            Toast.makeText(getApplicationContext(), "Not connected: unable to send. Reconnecting...", Toast.LENGTH_LONG).show();
-                            //Reconnect to gear
-                            mConsumerService.findPeers();
-                            //if (i == 2) {
-                                //flag = true;
-                            //}
-                        }
-                    //}
-                    //if (flag == true) {
-                    //    Toast.makeText(getApplicationContext(), "Aborted after 3 attempts. Check connection...", Toast.LENGTH_LONG).show();
-                    //}
+                    //send update to gear
+                    sendData(sharedPref);
                 }
                 break;
             }
@@ -273,7 +242,7 @@ public class ConsumerActivity extends AppCompatActivity implements OnChartGestur
                 public void run() {
 
                     String data = msg.data;
-                    //Parse "Received" message from Gear and call setData
+                    //Parse "Received" message from Gear and call setChartData
                     Log.i("receivedGear", "Received(string): " + data);
                     //Received:Healthy=9,Unhealthy=1
 
@@ -293,8 +262,8 @@ public class ConsumerActivity extends AppCompatActivity implements OnChartGestur
                     //Open Shared Pref for saving data
                     SharedPreferences sharedPrefsStore = getPreferences(Context.MODE_PRIVATE);
 
-                    //Pass result to setData
-                    setData( sharedPrefsStore, Integer.parseInt(tokens[0]), Integer.parseInt(tokens[1]) );
+                    //Pass result to setChartData
+                    setChartData( sharedPrefsStore, Integer.parseInt(tokens[0]), Integer.parseInt(tokens[1]) );
 
 
                     //this added messages to message list
@@ -358,7 +327,7 @@ public class ConsumerActivity extends AppCompatActivity implements OnChartGestur
         }
     }
 
-    private void setData(SharedPreferences sharedPref, int healthy, int unhealthy) {
+    private void setChartData(SharedPreferences sharedPref, int healthy, int unhealthy) {
 
         //Toast.makeText(getApplicationContext(), "I am getting called", Toast.LENGTH_LONG).show();
 
@@ -372,34 +341,22 @@ public class ConsumerActivity extends AppCompatActivity implements OnChartGestur
         Log.i("unHealthyValue", "unHealthy: " + unhealthy);
 
         //Call to update data in chart
-        setData(sharedPref);
+        setChartData(sharedPref);
     }
 
-    private void setData(SharedPreferences sharedPref) {
-    //int count, float range
+    private void setChartData(SharedPreferences sharedPref) {
+        SavedData currentData;
+        //Get Saved Values
+        currentData = getValues();
 
-        //Open Share Pref
-        //SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
-
-        //Should be default or updated if received info from gear or if previous run of app
-        int defaultHealthyValue = getResources().getInteger(R.integer.saved_healthy_default);
-        int defaultUnhealthyValue = getResources().getInteger(R.integer.saved_unhealthy_default);
-        int healthyValue = sharedPref.getInt(getString(R.string.saved_healthy_value), defaultHealthyValue);
-        int unHealthyValue = sharedPref.getInt(getString(R.string.saved_unhealthy_value), defaultUnhealthyValue);
-        Log.i("healthyValue", "healthyValue(default): " + healthyValue);
-        Log.i("unHealthyValue", "unHealthyValue(default): " + unHealthyValue);
-
-
-        //float mult = range;
 
         ArrayList<Entry> yVals1 = new ArrayList<Entry>();
 
         // IMPORTANT: In a PieChart, no values (Entry) should have the same
         // xIndex (even if from different DataSets), since no values can be
         // drawn above each other.
-        yVals1.add(new Entry(healthyValue, 1));
-        yVals1.add(new Entry(unHealthyValue, 2));
-
+        yVals1.add(new Entry(currentData.healthy, 1));
+        yVals1.add(new Entry(currentData.unhealthy, 2));
 
         ArrayList<String> xVals = new ArrayList<String>();
         xVals.add("Healthy");
@@ -480,6 +437,62 @@ public class ConsumerActivity extends AppCompatActivity implements OnChartGestur
         Log.i("Translate / Move", "dX: " + dX + ", dY: " + dY);
     }
 
+    private void connect(SharedPreferences sharedPref) {
+        if (mIsBound == true && mConsumerService != null) {
+            Toast.makeText(getApplicationContext(), "Connecting", Toast.LENGTH_SHORT).show();
+            mConsumerService.findPeers();
+        }
+    }
+    private void disconnect(SharedPreferences sharedPref) {
+        if (mIsBound == true && mConsumerService != null) {
+            if (mConsumerService.closeConnection() == false) {
+                Toast.makeText(getApplicationContext(), R.string.ConnectionAlreadyDisconnected, Toast.LENGTH_LONG).show();
+                mMessageAdapter.clear();
+            } else {
+                Toast.makeText(getApplicationContext(), "Disconnecting", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+    private void sendData(SharedPreferences sharedPref) {
+        if (mIsBound == true && mConsumerService != null) {
+            SavedData currentData;
+            //Get Saved Values
+            currentData = getValues();
+            //Convert to string to send
+            String data = "Healthy=" + currentData.healthy + ",Unhealthy=" + currentData.unhealthy;
+
+            if (mConsumerService.sendData(data)) {
+                //break;
+            } else {
+                Toast.makeText(getApplicationContext(), "Not connected: unable to send. Reconnecting...", Toast.LENGTH_LONG).show();
+                //Reconnect to gear
+                mConsumerService.findPeers();
+            }
+        }
+    }
+
+    private void decHe(SharedPreferences sharedPref) {
+        if (mIsBound == true && mConsumerService != null) {
+            SavedData currentData;
+            //Get Saved Values
+            currentData = getValues();
+
+            //Pass result to setChartData
+            setChartData( sharedPref, currentData.healthy - 1, currentData.unhealthy);
+        }
+    }
+    private void decUn(SharedPreferences sharedPref) {
+        if (mIsBound == true && mConsumerService != null) {
+            SavedData currentData;
+            //Get Saved Values
+            currentData = getValues();
+
+            //Pass result to setChartData
+            setChartData( sharedPref, currentData.healthy, currentData.unhealthy - 1);
+        }
+    }
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -492,27 +505,35 @@ public class ConsumerActivity extends AppCompatActivity implements OnChartGestur
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-        Log.i("OptionMenu", "Item clicked: " + id);
-        //noinspection SimplifiableIfStatement
+        //Open Share Pref
+        SharedPreferences sharedPref = getPreferences(Context.MODE_PRIVATE);
 
+        int id = item.getItemId();
         switch (id) {
             case R.id.action_connect:
-                Toast.makeText(getApplicationContext(), "Clicked Connect", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(), "Clicked Connect", Toast.LENGTH_SHORT).show();
+                connect(sharedPref);
                 break;
             case R.id.action_disconnect:
-                Toast.makeText(getApplicationContext(), "Clicked Disconnect", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(), "Clicked Disconnect", Toast.LENGTH_SHORT).show();
+                disconnect(sharedPref);
                 break;
             case R.id.action_send:
-                Toast.makeText(getApplicationContext(), "Clicked Send", Toast.LENGTH_SHORT).show();
+                //Toast.makeText(getApplicationContext(), "Clicked Send", Toast.LENGTH_SHORT).show();
+                sendData(sharedPref);
+                break;
+            case R.id.action_negHealthy:
+                //Toast.makeText(getApplicationContext(), "Clicked Send", Toast.LENGTH_SHORT).show();
+                decHe(sharedPref);
+                sendData(sharedPref);
+                break;
+            case R.id.action_negUnhealthy:
+                //Toast.makeText(getApplicationContext(), "Clicked Send", Toast.LENGTH_SHORT).show();
+                decUn(sharedPref);
+                sendData(sharedPref);
                 break;
             default:
         }
-
-        /*if (id == R.id.action_settings) {
-            return true;
-        }*/
-
         return super.onOptionsItemSelected(item);
     }
 

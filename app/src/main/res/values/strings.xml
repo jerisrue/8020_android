@@ -3,24 +3,30 @@
 
     <string name="app_name">80/20</string>
 
+    <!-- Selection items and buttons -->
     <string name="action_connect">Connect</string>
-    <string name="action_disconnect">Connect</string>
-    <string name="action_send">Connect</string>
-    <string name="ConnectionEstablishedMsg">Service Connection with provider has been established.</string>
-    <string name="ConnectionTerminateddMsg">Service Connection with provider has been terminated.</string>
-    <string name="ConnectionAlreadyExist">Service Connection has already existed!!!</string>
-    <string name="ConnectionAlreadyDisconnected">Service Connection has already been disconnected!!!</string>
-    <string name="ConnectionFailure">Service Connection Failure</string>
-    <string name="NoPeersFound">No peers found!!!</string>
+    <string name="action_disconnect">Disconnect</string>
+    <string name="action_send">Send</string>
+    <string name="action_negHealthy">- Healthy</string>
+    <string name="action_negUnhealthy">- Unhealthy</string>
     <string name="buttonConnect">Connect</string>
     <string name="buttonDisconnect">Disconnect</string>
     <string name="buttonSend">Send</string>
     <string name="buttoIncHe">+Healthy</string>
     <string name="buttonIncUn">+Unhealthy</string>
 
+    <!-- Toast Messages -->
+    <string name="ConnectionEstablishedMsg">Service Connection with provider has been established.</string>
+    <string name="ConnectionTerminateddMsg">Service Connection with provider has been terminated.</string>
+    <string name="ConnectionAlreadyExist">Service Connection has already existed!!!</string>
+    <string name="ConnectionAlreadyDisconnected">Service Connection has already been disconnected!!!</string>
+    <string name="ConnectionFailure">Service Connection Failure</string>
+    <string name="NoPeersFound">No peers found!!!</string>
+
+    <!-- Shared Preferences Value Names -->
     <string name="saved_healthy_value">savaDaHealthyValue</string>
     <string name="saved_unhealthy_value">savaDaUnhealthyValue</string>
 
-    <string name="ReceivedMsg">Received Test</string>
+    <!--<string name="ReceivedMsg">Received Test</string>-->
 
 </resources>

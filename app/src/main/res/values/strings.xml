@@ -2,7 +2,10 @@
 <resources>
 
     <string name="app_name">80/20</string>
-    <string name="hello_world">Hello Accessory!</string>
+
+    <string name="action_connect">Connect</string>
+    <string name="action_disconnect">Connect</string>
+    <string name="action_send">Connect</string>
     <string name="ConnectionEstablishedMsg">Service Connection with provider has been established.</string>
     <string name="ConnectionTerminateddMsg">Service Connection with provider has been terminated.</string>
     <string name="ConnectionAlreadyExist">Service Connection has already existed!!!</string>

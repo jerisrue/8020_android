@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:2:1-53:12
+ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:2:1-55:12
 	package
 		ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:3:5-80
 		INJECTED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml
@@ -41,8 +41,26 @@ ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src
 		ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:12:22-73
 uses-sdk
 ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:14:5-16:41
-MERGED from [com.android.support:appcompat-v7:23.1.1] C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\AndroidManifest.xml:20:5-43
-MERGED from [com.android.support:support-v4:23.1.1] C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:23.3.0] C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-vector-drawable:23.3.0] C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.3.0] C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:animated-vector-drawable:23.3.0] C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:support-vector-drawable:23.3.0] C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.3.0] C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.3.0] C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:design:23.3.0] C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\exploded-aar\com.android.support\design\23.3.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:appcompat-v7:23.3.0] C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:21:5-23:78
+MERGED from [com.android.support:support-vector-drawable:23.3.0] C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.3.0] C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:animated-vector-drawable:23.3.0] C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\AndroidManifest.xml:5:5-44
+MERGED from [com.android.support:support-vector-drawable:23.3.0] C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:5:5-43
+MERGED from [com.android.support:support-v4:23.3.0] C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.3.0] C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.3.0] C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:recyclerview-v7:23.3.0] C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\exploded-aar\com.android.support\recyclerview-v7\23.3.0\AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:support-v4:23.3.0] C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:20:5-43
+	tools:overrideLibrary
+		ADDED from [com.android.support:appcompat-v7:23.3.0] C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:23:9-75
 	android:targetSdkVersion
 		ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:16:9-38
 		INJECTED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml
@@ -52,66 +70,85 @@ MERGED from [com.android.support:support-v4:23.1.1] C:\Users\ruejer01\AndroidStu
 		INJECTED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml
 		INJECTED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml
 application
-ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:18:5-51:19
-MERGED from [com.android.support:appcompat-v7:23.1.1] C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.1.1\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:support-v4:23.1.1] C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.1.1\AndroidManifest.xml:22:5-20
+ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:18:5-53:19
+MERGED from [com.android.support:appcompat-v7:23.3.0] C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-vector-drawable:23.3.0] C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.3.0] C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:animated-vector-drawable:23.3.0] C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-vector-drawable:23.3.0] C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.3.0] C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.3.0] C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:design:23.3.0] C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\exploded-aar\com.android.support\design\23.3.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:appcompat-v7:23.3.0] C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\AndroidManifest.xml:25:5-20
+MERGED from [com.android.support:support-vector-drawable:23.3.0] C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.3.0] C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:animated-vector-drawable:23.3.0] C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.3.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-vector-drawable:23.3.0] C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\AndroidManifest.xml:7:5-20
+MERGED from [com.android.support:support-v4:23.3.0] C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.3.0] C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.3.0] C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
+MERGED from [com.android.support:support-v4:23.3.0] C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\AndroidManifest.xml:22:5-20
 	android:label
 		ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:21:9-41
 	android:allowBackup
 		ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:19:9-35
 	android:icon
-		ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:20:9-43
+		ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:20:9-41
+	android:theme
+		ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:22:9-40
 activity#com.samsung.android.sdk.accessory.example.helloaccessory.consumer.ConsumerActivity
-ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:22:9-30:20
+ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:23:9-32:20
 	android:screenOrientation
-		ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:25:13-49
+		ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:26:13-49
 	android:label
-		ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:24:13-45
+		ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:25:13-45
+	android:theme
+		ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:27:13-56
 	android:name
-		ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:23:13-110
+		ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:24:13-110
 intent-filter#android.intent.action.MAIN+android.intent.category.LAUNCHER
-ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:26:13-29:29
+ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:28:13-31:29
 action#android.intent.action.MAIN
-ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:27:17-69
+ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:29:17-69
 	android:name
-		ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:27:25-66
+		ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:29:25-66
 category#android.intent.category.LAUNCHER
-ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:28:17-77
+ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:30:17-77
 	android:name
-		ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:28:27-74
+		ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:30:27-74
 service#com.samsung.android.sdk.accessory.example.helloaccessory.consumer.ConsumerService
-ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:32:9-117
+ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:34:9-117
 	android:name
-		ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:32:18-114
+		ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:34:18-114
 receiver#com.samsung.android.sdk.accessory.RegisterUponInstallReceiver
-ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:34:9-38:20
+ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:36:9-40:20
 	android:name
-		ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:34:19-95
+		ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:36:19-95
 intent-filter#com.samsung.accessory.action.REGISTER_AGENT
-ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:35:13-37:29
+ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:37:13-39:29
 action#com.samsung.accessory.action.REGISTER_AGENT
-ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:36:17-86
+ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:38:17-86
 	android:name
-		ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:36:25-83
+		ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:38:25-83
 receiver#com.samsung.android.sdk.accessory.ServiceConnectionIndicationBroadcastReceiver
-ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:39:9-43:20
+ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:41:9-45:20
 	android:name
-		ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:39:19-112
+		ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:41:19-112
 intent-filter#com.samsung.accessory.action.SERVICE_CONNECTION_REQUESTED
-ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:40:13-42:29
+ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:42:13-44:29
 action#com.samsung.accessory.action.SERVICE_CONNECTION_REQUESTED
-ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:41:17-100
+ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:43:17-100
 	android:name
-		ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:41:25-97
+		ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:43:25-97
 meta-data#AccessoryServicesLocation
-ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:45:9-47:62
+ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:47:9-49:62
 	android:value
-		ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:47:13-59
+		ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:49:13-59
 	android:name
-		ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:46:13-53
+		ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:48:13-53
 meta-data#GearAppType
-ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:48:9-50:35
+ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:50:9-52:35
 	android:value
-		ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:50:13-32
+		ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:52:13-32
 	android:name
-		ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:49:13-39
+		ADDED from C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\src\main\AndroidManifest.xml:51:13-39

@@ -36,8 +36,12 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.IBinder;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.MotionEvent;
@@ -58,20 +62,25 @@ import com.github.mikephil.charting.highlight.Highlight;
 import com.github.mikephil.charting.listener.ChartTouchListener;
 import com.github.mikephil.charting.listener.OnChartGestureListener;
 
-public class ConsumerActivity extends Activity implements OnChartGestureListener {
+public class ConsumerActivity extends AppCompatActivity implements OnChartGestureListener {
     private static TextView mTextView;
     private static MessageAdapter mMessageAdapter;
     private boolean mIsBound = false;
     private ListView mMessageListView;
     private ConsumerService mConsumerService = null;
 
+    Toolbar toolbar;
 
     private PieChart mChart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.test_activity);
+
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
         mTextView = (TextView) findViewById(R.id.tvStatus);
         mMessageListView = (ListView) findViewById(R.id.lvMessage);
         mMessageAdapter = new MessageAdapter();
@@ -135,8 +144,6 @@ public class ConsumerActivity extends Activity implements OnChartGestureListener
         switch (v.getId()) {
             case R.id.buttonIncHe: {
                 if (mIsBound == true && mConsumerService != null) {
-                    //mConsumerService.findPeers();
-                    Toast.makeText(getApplicationContext(), "IncHe", Toast.LENGTH_LONG).show();
 
                     //Should be default or updated if received info from gear or if previous run of app
                     int defaultHealthyValue = getResources().getInteger(R.integer.saved_healthy_default);
@@ -153,8 +160,6 @@ public class ConsumerActivity extends Activity implements OnChartGestureListener
             }
             case R.id.buttonIncUn: {
                 if (mIsBound == true && mConsumerService != null) {
-                    //mConsumerService.findPeers();
-                    Toast.makeText(getApplicationContext(), "IncUn", Toast.LENGTH_LONG).show();
 
                     //Should be default or updated if received info from gear or if previous run of app
                     int defaultHealthyValue = getResources().getInteger(R.integer.saved_healthy_default);
@@ -189,12 +194,33 @@ public class ConsumerActivity extends Activity implements OnChartGestureListener
             }
             case R.id.buttonSend: {
                 if (mIsBound == true && mConsumerService != null) {
-                    if (mConsumerService.sendData("Healthy=8,Unhealthy=2")) {
-                    } else {
-                        Toast.makeText(getApplicationContext(), "Not connected: unable to send. Reconnecting...", Toast.LENGTH_LONG).show();
-                        //Reconnect to gear
-                        mConsumerService.findPeers();
-                    }
+
+                    //Should be default or updated if received info from gear or if previous run of app
+                    int defaultHealthyValue = getResources().getInteger(R.integer.saved_healthy_default);
+                    int defaultUnhealthyValue = getResources().getInteger(R.integer.saved_unhealthy_default);
+                    int healthyValue = sharedPref.getInt(getString(R.string.saved_healthy_value), defaultHealthyValue);
+                    int unHealthyValue = sharedPref.getInt(getString(R.string.saved_unhealthy_value), defaultUnhealthyValue);
+                    Log.i("healthyValue", "healthyValue(toSend): " + healthyValue);
+                    Log.i("unHealthyValue", "unHealthyValue(toSend): " + unHealthyValue);
+
+                    String data = "Healthy=" + healthyValue + ",Unhealthy=" + unHealthyValue;
+
+                    //boolean flag = false;
+                    //for (int i=0; i<3; i++) {
+                        if (mConsumerService.sendData(data)) {
+                            //break;
+                        } else {
+                            Toast.makeText(getApplicationContext(), "Not connected: unable to send. Reconnecting...", Toast.LENGTH_LONG).show();
+                            //Reconnect to gear
+                            mConsumerService.findPeers();
+                            //if (i == 2) {
+                                //flag = true;
+                            //}
+                        }
+                    //}
+                    //if (flag == true) {
+                    //    Toast.makeText(getApplicationContext(), "Aborted after 3 attempts. Check connection...", Toast.LENGTH_LONG).show();
+                    //}
                 }
                 break;
             }
@@ -452,6 +478,42 @@ public class ConsumerActivity extends Activity implements OnChartGestureListener
     @Override
     public void onChartTranslate(MotionEvent me, float dX, float dY) {
         Log.i("Translate / Move", "dX: " + dX + ", dY: " + dY);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+        Log.i("OptionMenu", "Item clicked: " + id);
+        //noinspection SimplifiableIfStatement
+
+        switch (id) {
+            case R.id.action_connect:
+                Toast.makeText(getApplicationContext(), "Clicked Connect", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.action_disconnect:
+                Toast.makeText(getApplicationContext(), "Clicked Disconnect", Toast.LENGTH_SHORT).show();
+                break;
+            case R.id.action_send:
+                Toast.makeText(getApplicationContext(), "Clicked Send", Toast.LENGTH_SHORT).show();
+                break;
+            default:
+        }
+
+        /*if (id == R.id.action_settings) {
+            return true;
+        }*/
+
+        return super.onOptionsItemSelected(item);
     }
 
 }

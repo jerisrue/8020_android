@@ -5,7 +5,7 @@
         jar="C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
         jumboMode="true"
         revision="23.0.2"
-        sha1="9789b910aadac6a021273bb0f8345a824582ff60">
+        sha1="b15c28766f917a90de69a6467b56a43415f32191">
         <dex dex="C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_b20a960b531b5e1636fe685dfc0010990e6d9e7b\classes.dex" />
     </item>
     <item
@@ -44,18 +44,18 @@
         <dex dex="C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-23.3.0_be5436ca99cd00570eaba1d8c635d6e47837c49b\classes.dex" />
     </item>
     <item
-        jar="C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\libs\mpandroidchartlibrary-2-2-4.jar"
-        jumboMode="true"
-        revision="23.0.2"
-        sha1="e5455fb794bfcbeb75da252dffd907794614f7fd">
-        <dex dex="C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\transforms\dex\debug\folders\1000\2\mpandroidchartlibrary-2-2-4_775d14c8d94a36e4be7f78f2d31f3cae75596a1a\classes.dex" />
-    </item>
-    <item
         jar="C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.3.0\jars\classes.jar"
         jumboMode="true"
         revision="23.0.2"
         sha1="1b8e03daaa43fb0a4cd57e378167c2fd70454c1e">
         <dex dex="C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-appcompat-v7-23.3.0_11467e5c27ce5bb1de7c65512ccaa47f13c38590\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\libs\mpandroidchartlibrary-2-2-4.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="e5455fb794bfcbeb75da252dffd907794614f7fd">
+        <dex dex="C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\transforms\dex\debug\folders\1000\2\mpandroidchartlibrary-2-2-4_775d14c8d94a36e4be7f78f2d31f3cae75596a1a\classes.dex" />
     </item>
     <item
         jar="C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\exploded-aar\com.android.support\design\23.3.0\jars\classes.jar"
@@ -65,18 +65,18 @@
         <dex dex="C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-design-23.3.0_912e555db68dffee13923ad1adfec226511a1b93\classes.dex" />
     </item>
     <item
-        jar="C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        revision="23.0.2"
-        sha1="31856ded2bd292dbfa0b5ec0bdaf4ddd81bc587a">
-        <dex dex="C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_56cbb6ef626092b82b76298bc38e11c5945fcae5\classes.dex" />
-    </item>
-    <item
         jar="C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.3.0\jars\classes.jar"
         jumboMode="true"
         revision="23.0.2"
         sha1="a0b5d60246cd9d4f3f2443611b3b4c25265840b5">
         <dex dex="C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\transforms\dex\debug\folders\1000\10\com.android.support-support-vector-drawable-23.3.0_c429cae2e4062d8792ba616b869ee5f060a7cabf\classes.dex" />
+    </item>
+    <item
+        jar="C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        revision="23.0.2"
+        sha1="2dadc47d87df216632ae38a499b4b0364de5653c">
+        <dex dex="C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_56cbb6ef626092b82b76298bc38e11c5945fcae5\classes.dex" />
     </item>
     <item
         jar="C:\Users\ruejer01\AndroidStudioProjects\eightytwenty_android2\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.3.0\jars\classes.jar"

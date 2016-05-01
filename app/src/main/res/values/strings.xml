@@ -23,6 +23,9 @@
     <string name="ConnectionFailure">Service Connection Failure</string>
     <string name="NoPeersFound">No peers found!!!</string>
 
+    <!-- Default Values -->
+    <string name="nothing">null</string>
+
     <!-- Shared Preferences Value Names -->
     <string name="saved_healthy_value">savaDaHealthyValue</string>
     <string name="saved_unhealthy_value">savaDaUnhealthyValue</string>

@@ -299,6 +299,7 @@
     <string name="buttonIncUn">+Unhealthy</string>
     <string name="buttonSend">Send</string>
     <string name="character_counter_pattern" translatable="false">%1$d / %2$d</string>
+    <string name="nothing">null</string>
     <string name="saved_healthy_value">savaDaHealthyValue</string>
     <string name="saved_unhealthy_value">savaDaUnhealthyValue</string>
     <string name="status_bar_notification_info_overflow">999+</string>

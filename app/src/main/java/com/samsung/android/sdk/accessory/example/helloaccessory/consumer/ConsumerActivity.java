@@ -60,7 +60,7 @@ import com.github.mikephil.charting.listener.ChartTouchListener;
 import com.github.mikephil.charting.listener.OnChartGestureListener;
 
 public class ConsumerActivity extends AppCompatActivity implements OnChartGestureListener {
-    private static TextView mTextView;
+    private static TextView mTextView, heTextView, unTextView;
     private static MessageAdapter mMessageAdapter;
     private boolean mIsBound = false;
     private ListView mMessageListView;
@@ -78,6 +78,8 @@ public class ConsumerActivity extends AppCompatActivity implements OnChartGestur
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+        heTextView = (TextView) findViewById(R.id.textHealthy);
+        unTextView = (TextView) findViewById(R.id.textUnhealthy);
         mTextView = (TextView) findViewById(R.id.tvStatus);
         mMessageListView = (ListView) findViewById(R.id.lvMessage);
         mMessageAdapter = new MessageAdapter();
@@ -226,6 +228,8 @@ public class ConsumerActivity extends AppCompatActivity implements OnChartGestur
 
     public static void updateTextView(final String str) {
         mTextView.setText(str);
+        //heTextView.setText(str);
+        //unTextView.setText(str);
     }
 
     private class MessageAdapter extends BaseAdapter {
@@ -348,6 +352,12 @@ public class ConsumerActivity extends AppCompatActivity implements OnChartGestur
         SavedData currentData;
         //Get Saved Values
         currentData = getValues();
+
+        //Also update textViews
+        Integer he = currentData.healthy;
+        Integer un = currentData.unhealthy;
+        heTextView.setText(he.toString() );
+        unTextView.setText(un.toString() );
 
 
         ArrayList<Entry> yVals1 = new ArrayList<Entry>();
